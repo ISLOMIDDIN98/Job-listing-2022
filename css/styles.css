@@ -73,8 +73,8 @@ img{
 
 .main-content{
   flex-grow: 1;
-  margin-top: 76px;
-  margin-bottom: 120px;
+  padding-top: 76px;
+  padding-bottom: 120px;
 }
 
 .site-header{

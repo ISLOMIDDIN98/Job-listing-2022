@@ -4,16 +4,64 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Job listings</title>
 
-<!-- stylesheets -->
+  <!-- google-fonts -->
 
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&family=Nunito+Sans:wght@300;600;800&family=Roboto:wght@400;500;700&family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- stylesheets -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 
 
 </head>
 <body>
+  <h1 class="visually-hidden">Job listings</h1>
+
+  <div class="site-header"></div>
+
+  <main class="main-content">
+    <div class="container">
+      <h2 class="visually-hidden">Job offers list</h2>
+      <ul class="job-listings">
+        <li class="job-listings-item job-listings-item-featured">
+          <div class="job-listings-logo-info">
+            <img class="job-listings-logo" src="img/photosnap.svg" alt="Photosnap" width="88" height="88" >
+            <div class="job-listings-info">
+              <div class="job-listings-company-badges">
+                <div class="job-listings-company-badges-items">
+                  <div class="job-listings-company-name">Photosnap</div>
+                  <div class="job-listings-badges">
+                    <span class="job-listings-badges-item badge badge-green"> Nev!</span>
+                    <span class="job-listings-badges-item badge badge-black">Featured</span>
+                  </div>
+                </div>
+                <div class="job-listings-position"><a class="job-listings-link">Senior Frontend Developer</a></div>
+                <div class="job-listings-addl">
+                  <div class="job-listings-addl-item">1d ago</div>
+                  <div class="job-listings-addl-item">Full Time</div>
+                  <div class="job-listings-addl-item">USA only</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="job-listings-tags ">
+            <li class="job-listings-tags-iten tag ">Frontend</li>
+            <li class="job-listings-tags-iten tag ">Senior</li>
+            <li class="job-listings-tags-iten tag ">HTML</li>
+            <li class="job-listings-tags-iten tag ">CSS</li>
+            <li class="job-listings-tags-iten tag ">JavaScript</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </main>
+
 
 
   <script src="js/main.js"></script>

@@ -1,3 +1,15 @@
+:root{
+  --body-bg: #effafa;
+  --green: #5ca5a5;
+  --lite-green-bg: rgba(92, 165, 165, 0.1);
+
+  --lite-green: #7c8f8f;
+  --dark-green:#b7c4c4 ;
+  --black: #2b3939;
+  --white: #fff;
+
+}
+
 html{
   box-sizing:border-box;
   height: 100%;
@@ -13,31 +25,45 @@ html{
 
 
 body{
-display: flex;
-flex-direction: column;
-height: 100%;
-padding: 0;
-margin: 0;
-font-family:"arial", serif;
-font-size: 16px;
-line-height: 1.5;
-background-color: #fff;
-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family:"spartan","arial", serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: bold;
+  background-color: var(--body-bg);
+  color: var(--black);
 
 }
 
 
 img{
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
 
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -47,4 +73,161 @@ height: auto;
 
 .main-content{
   flex-grow: 1;
+  margin-top: 76px;
+  margin-bottom: 120px;
+}
+
+.site-header{
+  min-height: 156px;
+  background-image: url(../img/header-bg.svg);
+  background-size: avto 100%;
+  background-position: center;
+}
+
+.job-listings {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.job-listings-item {
+  display: flex;align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px 32px 35px;
+  border-left: 5px solid transparent;
+  border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+}
+
+.job-listings-item-featured{
+  border-left: 5px solid var(--green);
+}
+
+.job-listings-item:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.job-listings-logo-info{
+  display: flex;
+}
+
+.job-listings-logo{
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  margin-right: 24px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.job-listings-info {
+  flex-grow: 1;
+}
+.job-listings-company-badges {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-listings-company-badges-items{
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.job-listings-company-name {
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 24px;
+  color: var(--green);
+}
+
+.job-listings-badges-item {
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.0846154px;
+  text-transform: uppercase;
+  color:var(--white);
+  padding: 6px 8px 4px;
+  border-radius: 12px;
+}
+
+.job-listings-badges-item:not(:last-child){
+  margin-right: 8px;
+}
+
+.badge-green {
+  background-color: var(--green);
+}
+
+.badge-black {
+  background-color: var(--black);
+}
+
+.job-listings-position{
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.job-listings-link {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.job-listings-link:hover{
+  color: var(--green);
+}
+
+.job-listings-addl {
+  flex-grow: 1;
+  display: flex;
+}
+.job-listings-addl-item {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.115385px;
+    color: var(--lite-green);
+}
+
+.job-listings-addl-item:not(:last-child){
+  position: relative;
+  margin-right: 36px;
+}
+
+.job-listings-addl-item:not(:last-child)::before{
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background-color:#B7C4C4;
+  border-radius: 50%;
+  content: " ";
+}
+
+.job-listings-tags {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+.job-listings-tags-iten:not(:last-child) {
+  margin-right: 16px;
+}
+
+.tag {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  padding: 4px 8px;
+  background-color: var(--lite-green-bg);
+    color:var(--green);
+  border-radius: 4px;
 }
